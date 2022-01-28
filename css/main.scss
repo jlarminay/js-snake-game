@@ -1,0 +1,147 @@
+body {
+    text-align: center;
+}
+
+.mono {
+    font-family: "Courier New", Courier, monospace;
+}
+
+#options {
+
+    table {
+        margin: auto;
+        border-collapse: collapse;
+
+        tr.extra {
+            display: none;
+        }
+
+        th, td {
+            padding: 10px;
+
+            select {
+                width: 100%;
+                padding: 5px;
+            }
+            input {
+                padding: 5px;
+            }
+
+            button{
+                width: 100%;
+                cursor: pointer;
+                padding: 5px;
+            }
+        }
+    }
+}
+
+#game {
+    display: none;
+
+    #container {
+        margin: auto;
+
+        td {
+            padding: 10px;
+        }
+
+        #main-table {
+            border-collapse: collapse;
+
+            td {
+                color: rgba(0,0,0,0.3);
+
+                //tile types
+                &[tile='f']{
+                    //food tile
+                    background-color: rgb(62, 133, 0);
+                }
+                
+                &[tile='A']{
+                    background-color: rgb(146, 0, 0);
+                }
+                &[tile='a']{
+                    background-color: rgba(146, 0, 0, 0.7);
+                }
+
+                &[tile='B']{
+                    background-color: rgb(0, 132, 209);
+                }
+                &[tile='b']{
+                    background-color: rgba(0, 132, 209, 0.7);
+                }
+
+                &[tile='C']{
+                    background-color: rgb(211, 154, 0);
+                }
+                &[tile='c']{
+                    background-color: rgba(211, 154, 0, 0.7);
+                }
+
+                &[tile='D']{
+                    background-color: rgb(183, 0, 255);
+                }
+                &[tile='d']{
+                    background-color: rgba(183, 0, 255, 0.7);
+                }
+            }
+        }
+
+        #main-grid {
+            width: 600px;
+            height: 400px;
+            text-align: center
+        }
+
+        #controls {
+
+            button {
+                cursor: pointer;
+                width: 100%;
+                padding: 5px;
+            }
+        }
+
+        #data, #snakes {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+
+            .detailed {
+                display: none;
+            }
+
+            #data-0 th{
+                background-color: rgba(146, 0, 0, 0.7);
+            }
+            #data-1 th{
+                background-color: rgba(0, 132, 209, 0.7);
+            }
+            #data-2 th{
+                background-color: rgba(211, 154, 0, 0.7);
+            }
+            #data-3 th{
+                background-color: rgba(183, 0, 255, 0.7);
+            }
+
+            th, td {
+                padding: 10px;
+            }
+        }
+    }
+
+    #log-holder {
+        width: 70%;
+        margin: 20px auto;
+
+        h3 {
+            margin: 0;
+        }
+
+        #logs_write {
+            margin: 10px;
+            width: 100%;
+        }
+    }
+}
